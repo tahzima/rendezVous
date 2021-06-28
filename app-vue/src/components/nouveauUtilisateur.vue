@@ -2,10 +2,10 @@
     <div class="container">
         <div class="row align-items-center h-100">
             <div class="col-md-6 border mx-auto my-2 align-middle px-5 py-4 shadow rounded   ">
-                <h2 class="mb-4 text-center">Nouveau Utilisateur</h2>
-                <form action="" class="text-center">
+                <h2 class="mb-4">Nouveau Utilisateur</h2>
+                <form action="">
                     Nom :
-                    <input type="text" name="Nom" v-model="Nom" class="form-control" placeholder="Nom" ><br>
+                    <input type="text" name="Nom" v-model="Nom" class="form-control" placeholder="Nom"><br>
                     Prenom :
                     <input type="text" name="Prenom" v-model="Prenom" class="form-control" placeholder="Prenom"><br>
                     Email :
@@ -14,9 +14,8 @@
                     <input type="number" name="Tele" v-model="Tele" class="form-control" placeholder="Tele"><br>
                     Age :
                     <input type="number" name="Age" v-model="Age" class="form-control" placeholder="Age"><br>
-                    reference :
-                    <input type="text" name="reference" v-model="reference" class="form-control"><br>
-                    <button name="submit" v-on:click.prevent="Add()" class="btn btn-dark col-md-12">Login</button>
+                    <input type="text" name="reference" v-model="reference" class="form-control">
+                <button name="submit" v-on:click.prevent="Add()" class="btn btn-primary col-md-4">Login</button>
                 </form>
             </div>
         </div>
@@ -38,7 +37,7 @@ export default {
     },
     methods: {
        async Add(){
-           await fetch("http://localhost/rendezVous/user/register", {
+           await fetch("http://localhost/www/brief_6_VueJs_API/user/register", {
 				method: "POST",
 				headers: {
 					'Content-Type': 'application/json'
